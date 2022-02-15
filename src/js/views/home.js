@@ -1,14 +1,15 @@
 import React from "react";
-import rigoImage from "../../img/rigo-baby.jpg";
 import "../../styles/home.css";
+import { CardGrid } from "../component/CardGrid";
 
 export const Home = () => (
 	<div >
-		<p>
+		<h3>
 			Characters
-		</p>
-		<p>
+		</h3>
+		<CardGrid />
+		<h3>
 			Planets
-		</p>
+		</h3>
 	</div>
 );
