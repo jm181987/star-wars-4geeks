@@ -1,4 +1,4 @@
-import React, {useContext} from "react";
+import React, { useContext } from "react";
 import { Context } from "../store/appContext";
 import { CardGridItem } from "./CardGridItem";
 
@@ -8,7 +8,7 @@ export const CardGrid = () => {
     console.log(store.personajes);
     return (
         <div className="d-flex flex-row bd-highlight mb-3">
-            {store.personajes.map((item) => <CardGridItem key={item.uid}/>)}
+            {store.personajes.map((item) => (<CardGridItem key={item.name} />))}
         </div>
     );
 }
