@@ -8,7 +8,7 @@ export const CardGrid = () => {
     console.log(store.personajes);
     return (
         <div className="d-flex flex-row bd-highlight mb-3">
-            {store.personajes.map((item) => (<CardGridItem key={item.name} />))}
+            {store.personajes.map((item,i) => (<CardGridItem key={i} item={item} />))}
         </div>
     );
 }

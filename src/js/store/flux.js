@@ -7,7 +7,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 		},
 		actions: {
 			obtenerPersonajes: ()=>{
-				fetch('https://www.swapi.tech/api/people')
+				fetch('https://swapi.dev/api/people')
 				.then((response)=>response.json())
 				.then(data => setStore({personajes: data.results}))
 			},
