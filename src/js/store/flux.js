@@ -3,7 +3,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 		store: {
 			personajes: [],
 			planetas: [],
-			personaje:{}
+			personaje:{},
+			planeta:{},
+			favoritos:[]
 		},
 		actions: {
 			obtenerPersonajes: ()=>{
@@ -15,6 +17,29 @@ const getState = ({ getStore, getActions, setStore }) => {
 				fetch(`https://www.swapi.tech/api/people/${id}`)
 				.then((response)=>response.json())
 				.then(data => setStore({personaje: data.result}))
+			},
+			obtenerPlanetas: ()=>{
+				fetch('https://swapi.dev/api/planets')
+				.then((response)=>response.json())
+				.then(data => setStore({planetas: data.results}))
+			},
+			obtienePlaneta: (id)=>{
+				fetch(`https://www.swapi.tech/api/planets/${id}`)
+				.then((response)=>response.json())
+				.then(data =>setStore({personaje:data.result}))
+			},
+			guardaFavoritos(nombreItem, id){
+				const store = getStore();
+				const fav = store.favoritos;
+				const newFav = [...fav, { name: nombreItem, id:id }]
+				setStore({favoritos: newFav})
+			},
+
+			eliminaFavorito(id){
+				const store = getStore();
+				const fav = store.favoritos;
+				const favActualizado = fav.filter((item) => item.id !== id);
+				setStore({favoritos: favActualizado})
 			}
 		}			
 	};

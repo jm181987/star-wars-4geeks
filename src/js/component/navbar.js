@@ -1,22 +1,26 @@
-import React from "react";
+import React,{useContext}from "react";
 import { Link } from "react-router-dom";
+import { Context } from "../store/appContext";
 
 export const Navbar = () => {
+  const { store, actions } = useContext(Context);
   return (
     <nav className="navbar navbar-light bg-light mb-3">
       <Link to="/">
         <img
           className="navbar-brand mb-0 h1"
-          src="https://img.icons8.com/ios/50/000000/star-wars.png"/>
+          src="https://img.icons8.com/ios/50/000000/star-wars.png" />
       </Link>
       <div className="ml-auto">
         <Link to="/">
-        <div class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle bg-primary text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Favorites</a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-          </ul></div>
+          <div class="nav-item dropdown">
+            <span class="nav-link dropdown-toggle bg-primary text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Favorites {store.favoritos.length}</span>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              {store.favoritos.map((item) => {
+                return <li><a className="dropdown-item"> <span onClick={() => { actions.eliminaFavorito(item.id) }} className={"fa fa-trash"}></span>{item.name}</a></li>
+              })}
+            </ul></div>
         </Link>
       </div>
     </nav>

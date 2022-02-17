@@ -1,14 +1,14 @@
 import React, { useContext } from "react";
 import { Context } from "../store/appContext";
-import { CardGridItem } from "./CardGridItem";
+import { PlanetGridItem} from "./PlanetGridItem";
 
 
-export const CardGrid = () => {
+export const PlanetGrid = () => {
     const { store, actions } = useContext(Context);
-    //onsole.log(store.personajes);
+    console.log(store.planetas);
     return (
         <div className="d-flex flex-row bd-highlight mb-3">
-            {store.personajes.map((item,i) => (<CardGridItem key={i} item={item} />))}
+            {store.planetas.map((item,i) => (<PlanetGridItem key={i} item={item} />))}
         </div>
     );
 }

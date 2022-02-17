@@ -1,6 +1,7 @@
 import React from "react";
 import "../../styles/home.css";
 import { CardGrid } from "../component/CardGrid";
+import { PlanetGrid} from "../component/PlanetGrid";
 
 export const Home = () => (
 	<div >
@@ -11,5 +12,6 @@ export const Home = () => (
 		<h3>
 			Planets
 		</h3>
+		<PlanetGrid />
 	</div>
 );

@@ -3,12 +3,13 @@ import PropTypes from "prop-types";
 import { Link, useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
 
-export const Single = props => {
+export const SingleP= props => {
 	const { store, actions } = useContext(Context);
 	const params = useParams();
 	useEffect(() => {
-		actions.obtienePersonaje(params.theid);
+		actions.obtienePlaneta(params.theid);
 	}, [])
+	console.log(store.personaje.properties);
 	return (
 		<div className="container">
 			<div classNameName="card mb-3" style={{ "maxWidth": "800px" }}>
@@ -18,7 +19,7 @@ export const Single = props => {
 					</div>
 					<div className="col-md-8">
 						<div className="card-body">
-							<h5 className="card-title">{store.personaje.properties?.name}</h5>
+							<h5 className="card-title">{store.planeta.properties?.name}</h5>
 							<p className="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 						</div>
 					</div>
@@ -26,27 +27,7 @@ export const Single = props => {
 				<div className="row text-danger">
 					<div className="col-2 text-center">
 						<p>Name</p>
-						<p>{store.personaje.properties?.name}</p>
-					</div>
-					<div className="col-2 text-center">
-						<p>Birth Year</p>
-						<p>{store.personaje.properties?.birth_year}</p>
-					</div>
-					<div className="col-2 text-center">
-						<p>Gender</p>
-						<p>{store.personaje.properties?.gender}</p>
-					</div>
-					<div className="col-2 text-center">
-						<p>Height</p>
-						<p>{store.personaje.properties?.height}</p>
-					</div>
-					<div className="col-2 text-center">
-						<p>Skin Color</p>
-						<p>{store.personaje.properties?.skin_color}</p>
-					</div>
-					<div className="col-2 text-center">
-						<p>Eye Color</p>
-						<p>{store.personaje.properties?.eye_color}</p>
+						<p>{store.planeta.properties?.name}</p>
 					</div>
 				</div>
 			</div>
@@ -61,6 +42,6 @@ export const Single = props => {
 	);
 };
 
-Single.propTypes = {
+SingleP.propTypes = {
 	match: PropTypes.object
 };
