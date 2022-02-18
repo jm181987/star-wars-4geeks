@@ -5,12 +5,13 @@ import { PlanetGrid} from "../component/PlanetGrid";
 
 export const Home = () => (
 	<div >
-		<h3>
-			Characters
+		<h3 className="text-center">
+			<span className="text-danger ">Characters</span>
 		</h3>
 		<CardGrid />
-		<h3>
-			Planets
+		<hr></hr>
+		<h3 className="text-center">
+		<span className="text-danger">Planets</span>
 		</h3>
 		<PlanetGrid />
 	</div>

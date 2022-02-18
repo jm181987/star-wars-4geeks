@@ -7,7 +7,7 @@ export const PlanetGridItem = ({ item }) => {
     const {store, actions} = useContext(Context);
     const id = item.url.split("/")[5];
     return (
-        <div className="card" style={{ width: "18rem" }}>
+        <div className="card d-grid gap-3" style={{ width: "18rem" }}>
             <img src="https://img.icons8.com/ios/50/000000/star-wars.png" className="card-img-top" alt="..." />
             <div className="card-body">
                 <h5 className="card-title">Name: {item.name}</h5>
