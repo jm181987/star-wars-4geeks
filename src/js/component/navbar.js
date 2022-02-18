@@ -15,7 +15,7 @@ export const Navbar = () => {
       <div className="ml-auto">
         <Link to="/">
           <div className="nav-item dropdown">
-            <span className="nav-link dropdown-toggle bg-primary text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <span className="nav-link dropdown-toggle bg-secondary text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Favorites {store.favoritos.length}</span>
             <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
               {store.favoritos.map((item) => {
