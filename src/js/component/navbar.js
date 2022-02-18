@@ -5,7 +5,7 @@ import { Context } from "../store/appContext";
 export const Navbar = () => {
   const { store, actions } = useContext(Context);
   return (
-    <nav className="navbar navbar-light bg-light mb-3">
+    <nav className="navbar navbar-light bg-dark mb-3 container">
       <Link to="/">
         <img
           className="navbar-brand mb-0 h1"
