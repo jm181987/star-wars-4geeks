@@ -15,7 +15,7 @@ export const SingleP= props => {
 			<div className="card mb-3" style={{ "maxWidth": "800px" }}>
 				<div className="row g-0">
 					<div className="col-md-4">
-						<img src="https://img.icons8.com/ios/50/000000/star-wars.png" className="img-fluid rounded-start" alt="..." />
+						<img src={`https://starwars-visualguide.com/assets/img/planets/${params.theid}.jpg`} className="img-fluid rounded-start" alt="..." />
 					</div>
 					<div className="col-md-8">
 						<div className="card-body">
