@@ -28,10 +28,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 				.then((response)=>response.json())
 				.then(data =>setStore({personaje:data.result}))
 			},
-			guardaFavoritos(nombreItem, id){
+			guardaFavoritos(nombreItem){
 				const store = getStore();
 				const fav = store.favoritos;
-				const newFav = [...fav, { name: nombreItem, id:id }]
+				const newFav = [...fav, { name: nombreItem, id:fav.length }]
 				setStore({favoritos: newFav})
 			},
 

@@ -13,10 +13,10 @@ export const Navbar = () => {
       </Link>
       <div className="ml-auto">
         <Link to="/">
-          <div class="nav-item dropdown">
-            <span class="nav-link dropdown-toggle bg-primary text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <div className="nav-item dropdown">
+            <span className="nav-link dropdown-toggle bg-primary text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Favorites {store.favoritos.length}</span>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
               {store.favoritos.map((item) => {
                 return <li><a className="dropdown-item"> <span onClick={() => { actions.eliminaFavorito(item.id) }} className={"fa fa-trash"}></span>{item.name}</a></li>
               })}
