@@ -1,13 +1,14 @@
-import React,{useContext}from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 
 export const Navbar = () => {
   const { store, actions } = useContext(Context);
   return (
-    <nav className="navbar navbar-light bg-dark mb-3 container">
+    <nav className="navbar navbar-light bg-light mb-3 container">
       <Link to="/">
         <img
+          style={{ objectFit: "cover" }}
           className="navbar-brand mb-0 h1"
           src="https://img.icons8.com/ios/50/000000/star-wars.png" />
       </Link>

@@ -4,15 +4,15 @@ import { CardGrid } from "../component/CardGrid";
 import { PlanetGrid} from "../component/PlanetGrid";
 
 export const Home = () => (
-	<div >
-		<h3 className="text-center">
+	<div className="container-md">
+		<h2 className="text-center">
 			<span className="text-danger ">Characters</span>
-		</h3>
+		</h2>
 		<CardGrid />
 		<hr></hr>
-		<h3 className="text-center">
+		<h2 className="text-center">
 		<span className="text-danger">Planets</span>
-		</h3>
+		</h2>
 		<PlanetGrid />
 	</div>
 );
