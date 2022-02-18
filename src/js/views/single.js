@@ -9,9 +9,10 @@ export const Single = props => {
 	useEffect(() => {
 		actions.obtienePersonaje(params.theid);
 	}, [])
+	console.table(store.personaje.properties);
 	return (
 		<div className="d-flex flex-row container ">
-			<div classNameName="card mb-3" style={{ "maxWidth": "800px" }}>
+			<div className="card mb-3" style={{ "maxWidth": "800px" }}>
 				<div className="row g-0">
 					<div className="col-md-4">
 						<img src="https://img.icons8.com/ios/50/000000/star-wars.png" className="img-fluid rounded-start" alt="..." />

@@ -26,7 +26,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			obtienePlaneta: (id)=>{
 				fetch(`https://www.swapi.tech/api/planets/${id}`)
 				.then((response)=>response.json())
-				.then(data =>setStore({personaje:data.result}))
+				.then(data =>setStore({planeta:data.result}))
 			},
 			guardaFavoritos(nombreItem){
 				const store = getStore();
