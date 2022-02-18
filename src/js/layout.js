@@ -6,6 +6,7 @@ import { Home } from "./views/home";
 import { Single } from "./views/single";
 import { SingleP } from "./views/singleP";
 import injectContext from "./store/appContext";
+import { Footer } from "./component/footer";
 
 import { Navbar } from "./component/navbar";
 
@@ -34,6 +35,7 @@ const Layout = () => {
 							<h1>Not found!</h1>
 						</Route>
 					</Switch>
+					<Footer />
 				</ScrollToTop>
 			</BrowserRouter>
 		</div>

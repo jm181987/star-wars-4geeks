@@ -10,7 +10,7 @@ export const Single = props => {
 		actions.obtienePersonaje(params.theid);
 	}, [])
 	return (
-		<div className="container">
+		<div className="d-flex flex-row container ">
 			<div classNameName="card mb-3" style={{ "maxWidth": "800px" }}>
 				<div className="row g-0">
 					<div className="col-md-4">

@@ -19,7 +19,7 @@ export const CardGridItem = ({ item }) => {
                 <p className="card-text">Eye Color: {item.eye_color}</p>
                 <hr></hr>
                 <Link className="btn btn-outline-primary" to={`/single/${id}`}>Learn more</Link>
-                <button  className="btn btn-outline-warning" onClick={() => {actions.guardaFavoritos(item.name)}}><i className="bi bi-chat-heart-fill"></i></button>
+                <button  className="btn btn-outline-warning" onClick={() => {actions.guardaFavoritos(item.name)}}><i className="fas fa-fire"></i></button>
             </div>
         </div>
     );

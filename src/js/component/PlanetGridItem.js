@@ -15,7 +15,7 @@ export const PlanetGridItem = ({ item }) => {
                 <p className="card-text">Population: {item.population}</p>
                 <hr></hr>
                 <Link className="btn btn-outline-primary" to={`/singleP/${id}`}>Learn more</Link>
-                <button  className="btn btn-outline-warning" onClick={() => {actions.guardaFavoritos(item.name)}}><i className="bi bi-chat-heart-fill"></i></button>
+                <button  className="btn btn-outline-warning" onClick={() => {actions.guardaFavoritos(item.name)}}><i className="fas fa-fire"></i></button>
             </div>
         </div>
     );
