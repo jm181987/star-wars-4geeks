@@ -8,8 +8,12 @@ export const PlanetGridItem = ({ item }) => {
     const id = item.url.split("/")[5];
     return (
         <div className="col">
-            <div className="card text-dark bg-light border-dark mb-3" style={{ width: "18rem", border: "1px solid gray", borderRadius: "6px", marginBottom: "10px", marginRight: "10px", overflow: "hidden" }}>
-                <img style={{  objectFit: "cover" }} src={`https://starwars-visualguide.com/assets/img/planets/${id}.jpg`} className="card-img-top " alt="..." />
+            <div className="card text-dark bg-light border-dark mb-3" style={{ width: "24rem", border: "1px solid gray", borderRadius: "6px", marginBottom: "10px", marginRight: "10px", overflow: "hidden" }}>
+                <img style={{ objectFit: "cover" }} src={`https://starwars-visualguide.com/assets/img/planets/${id}.jpg`}
+                    onError={(e) => {
+                        e.target.onerror = null
+                        e.target.src = 'https://img.icons8.com/ios/50/000000/star-wars.png'
+                    }} className="card-img-top " alt="..." />
                 <div className="card-body">
                     <h5 className="card-title">Name: {item.name}</h5>
                     <p className="card-text">Terrain: {item.terrain}</p>
