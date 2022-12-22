@@ -18,7 +18,7 @@ export const SingleP= props => {
 						<img src={`https://starwars-visualguide.com/assets/img/planets/${params.theid}.jpg`} 
 						onError={(e) => {
 							e.target.onerror = null
-							e.target.src = 'https://img.icons8.com/ios/50/000000/star-wars.png'
+							e.target.src = 'https://technabob.com/blog/wp-content/uploads/2010/10/101810_rg_Stormtrooper404_01.jpg'
 						}} 
 						className="img-fluid rounded-start" alt="..." />
 					</div>

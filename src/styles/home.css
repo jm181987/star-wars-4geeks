@@ -1,8 +1,9 @@
 body
 {
-    background: url(http://www.script-tutorials.com/demos/360/images/stars.png) top center #000;
-    padding: 60px;
+    background: url(https://www.ngenespanol.com/wp-content/uploads/2022/06/GettyImages-692243858.jpg) top center #000;
+    padding: 15px;
+    background-size: contain;
 }
 *{
-    font-family:  Helvetica,Arial, sans-serif;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   }

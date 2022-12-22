@@ -6,7 +6,7 @@ import { PlanetGrid} from "../component/PlanetGrid";
 export const Home = () => (
 	<div className="container-md">
 		<h2 className="text-center">
-			<span className="text-danger ">Characters</span>
+			<span className="text-danger">Characters</span>
 		</h2>
 		<CardGrid />
 		<hr></hr>

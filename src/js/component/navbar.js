@@ -10,7 +10,7 @@ export const Navbar = () => {
         <img
           style={{ objectFit: "cover" }}
           className="navbar-brand mb-0 h1"
-          src="https://img.icons8.com/ios/50/000000/star-wars.png" />
+          src="https://pngimg.com/uploads/starwars/starwars_PNG21.png" />
       </Link>
       <div className="ml-auto">
         <Link to="/">
