@@ -3,7 +3,7 @@ import React, { Component } from "react";
 export const Footer = () => (
 	<footer className="footer mt-auto py-3 text-center">
 		<p>
-			<i className="text-danger" /> by{" "}
+			<i className="textby"/> by{" "} 
 			<a href="https://github.com/jm181987?tab=repositories" target="_blank">JORGE MARQUEZ</a>
 		</p>
 	</footer>
