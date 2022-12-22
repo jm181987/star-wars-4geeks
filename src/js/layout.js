@@ -38,6 +38,7 @@ const Layout = () => {
 				</ScrollToTop>
 			</BrowserRouter>
 		</div>
+		
 	);
 };
 
