@@ -97,3 +97,13 @@ To publish your website you need to push your code to your github repository and
 $ npm run deploy
 ```
 Note: You will need to [configure github pages for the branch gh-pages](https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/#enabling-github-pages-to-publish-your-site-from-master-or-gh-pages)
+
+---
+
+## Nota de esta copia
+
+Ejercicio de aplicación React ambientada en Star Wars. Se conservan las instrucciones originales de 4Geeks Academy para componentes, Context API y desarrollo con Webpack. Comprueba la versión de Node compatible con las dependencias antes de instalar, ya que el material original menciona una versión antigua.
+
+Material educativo original: **4Geeks Academy**.
+
+Mantenimiento del repositorio: **KNJ** · [KNJ Marketing](https://www.marketingknj.site/).
